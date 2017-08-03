@@ -6,7 +6,7 @@ class Modal extends React.Component {
     const { show, bg } = this.props;
 
     const ModalDivWrapper = styled.div`
-        display: ${show ? null : 'none'};
+        display: ${show ? '-webkit-flex' : 'none'};
         background-color:  ${bg || 'rgba(255, 255, 255, 0.8)'};
         position: fixed;
         width: 100%;
@@ -24,7 +24,7 @@ class Modal extends React.Component {
     `;
 
     return (
-      <ModalDivWrapper onClick={this.props.onClose}>
+      <ModalDivWrapper onClick={this.props.onClose} >
         {/*<span className="glyphicon glyphicon-remove-sign modal-item"
             onClick={this.props.onClose}></span>*/}
         <ModalDivContent>
