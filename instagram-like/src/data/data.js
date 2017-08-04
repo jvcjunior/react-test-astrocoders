@@ -1,4 +1,4 @@
-const images = [
+export const imagesData = [
     'https://s3-us-west-2.amazonaws.com/s.cdpn.io/123941/placeimg01.jpg',
     'https://s3-us-west-2.amazonaws.com/s.cdpn.io/123941/placeimg02.jpg',
     'https://s3-us-west-2.amazonaws.com/s.cdpn.io/123941/placeimg03.jpg',
@@ -11,4 +11,7 @@ const images = [
     'https://s3-us-west-2.amazonaws.com/s.cdpn.io/123941/placeimg10.jpg',
 ]
 
-export default images;
+export const userData = {
+    img: 'https://s3-us-west-2.amazonaws.com/s.cdpn.io/123941/placeimg01.jpg',
+    name: 'Valter Júnior',
+}

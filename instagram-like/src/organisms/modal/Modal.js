@@ -8,7 +8,7 @@ class Modal extends React.Component {
 
     const ModalDivWrapper = styled.div`
       display                 : ${show ? '-webkit-flex' : 'none'};
-      background-color        :  ${bg || 'rgba(255, 255, 255, 0.6)'};
+      background-color        :  ${bg || 'rgba(255, 255, 255, 0.8)'};
       position                : fixed;
       width                   : 100%;
       height                  : 100%;
