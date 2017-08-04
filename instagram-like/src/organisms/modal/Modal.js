@@ -35,6 +35,9 @@ class Modal extends React.Component {
         top       : 10,
         right     : 15,
         fontSize  : 30,
+      },
+      arrow: {
+        fontSize  : 30,
       }
     };
 
@@ -42,9 +45,9 @@ class Modal extends React.Component {
       <ModalDivWrapper>
         <Icon name="times" onClick={this.props.onClose} style={styles.closeIcon}/>
         <ModalDivContent>
-            <Icon name="chevron-left" />
+            <Icon name="chevron-left" onClick={this.props.previous} style={styles.arrow} />
             { this.props.children }
-            <Icon name="chevron-right" />
+            <Icon name="chevron-right" onClick={this.props.next} style={styles.arrow} />
         </ModalDivContent>
       </ModalDivWrapper>
     )
