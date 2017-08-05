@@ -8,14 +8,14 @@ class Modal extends React.Component {
 
     const ModalDivWrapper = styled.div`
       display                 : ${show ? '-webkit-flex' : 'none'};
-      background-color        :  ${bg || 'rgba(255, 255, 255, 0.8)'};
+      background-color        :  ${bg || 'rgba(0, 0, 0, 0.6)'};
       position                : fixed;
       width                   : 100%;
       height                  : 100%;
       flex-direction          : column;
       -webkit-flex-direction  : column;
       justify-content         : center;
-      color                   : white;
+      /*color                   : white;*/
       top                     : 0;
       left                    : 0;
     `;
@@ -35,14 +35,16 @@ class Modal extends React.Component {
         top       : 10,
         right     : 15,
         fontSize  : 30,
+        color     : 'white'
       },
       arrow: {
         fontSize  : 30,
+        color     : 'white'
       }
     };
 
     return (
-      <ModalDivWrapper>
+      <ModalDivWrapper className="modal">
         <Icon name="times" onClick={this.props.onClose} style={styles.closeIcon}/>
         <ModalDivContent>
             <Icon name="chevron-left" onClick={this.props.previous} style={styles.arrow} />

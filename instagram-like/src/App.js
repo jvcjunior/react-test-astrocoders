@@ -1,10 +1,9 @@
 import React, { Component } from 'react';
 import { imagesData } from './data/data';
 
-import Image from './atoms/image';
 import Grid from './molecules/grid';
-import UserInfo from './molecules/userInfo';
 import Modal from './organisms/modal';
+import ModalContent from './organisms/modal-content';
 
 class App extends Component {
 
@@ -47,12 +46,14 @@ class App extends Component {
           onClose={this.toggleModal}
           next={this.next}
           previous={this.previous}>
-          <div style={{backgroundColor: 'white',  display: '-webkit-flex', flexDirection  : 'row'}}>
+          {/*<div style={{backgroundColor: 'white',  display: '-webkit-flex', flexDirection  : 'row'}}>
             <Image src={images[selectedIndex]} />
             <div style={{height: '100%'}}>
               <UserInfo img={images[selectedIndex]} />
             </div>
-          </div>
+          </div>*/}
+          <ModalContent image={images[selectedIndex]} userImage={images[selectedIndex]}/>
+          
         </Modal>
         <Grid images= {images} onClick={this.toggleModal}/>
       </div>
